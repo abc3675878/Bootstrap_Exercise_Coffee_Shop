@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+
+    <title>Hello, world!</title>
+    <style>
+      #scene {
+        width: 120vw;
+        height: 120vh;
+        position: fixed;
+        left: -10%;
+        right: -10%;
+        bottom: -10%;
+        top: -10%;
+        z-index: -1;
+      }
+
+      .bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+      }
+
+      .bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .big-planet {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+      }
+
+      .big-planet img {
+        display: block;
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+        margin: auto;
+      }
+
+      .planet-01 {
+        width: 25vmax;
+        height: 25vmax;
+        position: absolute;
+        top: 30% !important;
+        left: 75% !important;
+        z-index: 3;
+      }
+
+      .planet-01 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .planet-02 {
+        width: 35vmax;
+        height: 35vmax;
+        position: absolute;
+        top: 10% !important;
+        left: 0 !important;
+        z-index: 4;
+      }
+
+      .planet-02 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .planet-03 {
+        width: 25vmax;
+        height: 25vmax;
+        position: absolute;
+        top: 70% !important;
+        left: 50% !important;
+        z-index: 5;
+      }
+
+      .planet-03 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .float-item {
+        animation: float-item infinite ease-in-out;
+      }
+
+      .dur-03 {
+        animation-duration: 3s;
+      }
+      .dur-05 {
+        animation-duration: 5s;
+      }
+      .dur-07 {
+        animation-duration: 7s;
+      }
+      .dur-09 {
+        animation-duration: 9s;
+      }
+
+      @keyframes float-item {
+        0% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(0, -10px);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="scene">
+      <div class="bg" data-depth="0.1"><img class="float-item dur-09" src="./images/nebula.jpg" alt="" /></div>
+      <div class="big-planet" data-depth="-0.1"><img src="./images/big-planet.png" alt="" /></div>
+      <div class="planet-01" data-depth="0.5">
+        <img class="float-item dur-07" src="./images/planet-01.png" alt="" />
+      </div>
+      <div class="planet-02" data-depth="-0.7">
+        <img class="float-item dur-05" src="./images/planet-02.png" alt="" />
+      </div>
+      <div class="planet-03" data-depth="1.2">
+        <img class="float-item dur-03" src="./images/planet-03.png" alt="" />
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="text-center">
+        <h1>Parallax</h1>
+      </div>
+      <div class="text-light p-4 my-4 rounded">
+        <p>
+          銀河星系（古稱銀河、天河、星河、天漢、銀漢等），是一個包含太陽系的棒旋星系。直徑介於100,000光年[20]至180,000光年[21]。大約擁有1,000億至4,000億顆恆星[22][23]，並可能有1,000億顆行星。太陽系距離銀河中心約26,000光年，在有著濃密氣體和塵埃，被稱為獵戶臂的螺旋臂的內側邊緣。在太陽的位置，公轉週期大約是2億4,000萬年[15]。從地球看，因為是從盤狀結構的內部向外觀看，因此銀河系呈現在天球上環繞一圈的帶狀。
+        </p>
+        <p>
+          銀河系中最古老的恆星幾乎和宇宙本身一樣古老，因此可能是在大爆炸之後不久的黑暗時期形成的[9]。在10,000光年內的恆星形成核球，並有著一或多根棒從核球向外輻射。最中心處被標示為強烈的電波源，可能是個超大質量黑洞，被命名為人馬座A*。在很大距離範圍內的恆星和氣體都以每秒大約220公里的速度在軌道上繞著銀河中心運行。這種恆定的速度違反了克卜勒動力學，因而認為銀河系中有大量不會輻射或吸收電磁輻射的質量。這些質量被稱為暗物質。
+        </p>
+        <p>
+          銀河系有幾個衛星星系，它們都是本星系群的成員，並且是室女超星系團的一部分；而它又是組成拉尼亞凱亞超星系團的一部分[27][28]。整個銀河系對銀河系外的參考坐標系以大約每秒600公里的速度在移動。
+        </p>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+    <script src="../../js/parallax.js"></script>
+    <script>
+      var scene = document.getElementById('scene')
+      var parallaxInstance = new Parallax(scene, {
+        relativeInput: true,
+        scalarX: 20,
+        scalarY: 20,
+
+        // 摩擦力 0.01 ~ 1
+        frictionX: 0.01,
+        frictionY: 0.01,
+
+        // 限制移動量
+        limitX: 300,
+        limitT: 300,
+      })
+    </script>
+  </body>
+</html>
